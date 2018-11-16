@@ -20,8 +20,23 @@ $(document).ready(function() {
 	  	$(".stream3").addClass('highlight_stream');
 	});
 	$("p").on("click", function() {
-		$("p").addClass('text_red');
+		$("p").addClass('color-text'); 
 	});
+	
+	$("h2").hover(function()
+		{    $("h2").css("background-color", "lightblue");   $(this).css("fontSize", "1.25em");    }, 
+	    	function()
+	    {    $("h2").css("background-color", ""); $(this).css("fontSize", "1em");		}
+	);	
+
+	$(".bottom_button").hover(function()
+		{    $("body").css("background-color", "#000");    }, 
+	    	function()
+	    {    $("body").css("background-color", "#eee"); 	}
+	);	
+
+
+
 
 
 }); 
