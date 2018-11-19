@@ -19,24 +19,55 @@ $(document).ready(function() {
 		$(".stream3").removeClass('highlight_stream');
 	  	$(".stream3").addClass('highlight_stream');
 	});
-	$("p").on("click", function() {
-		$("p").addClass('color-text'); 
-	});
+	$("p").click(function() {
+		$("p").addClass('color-text'); }
+	);
+	
+	$("p").dblclick(function() {
+		$("p").removeClass('color-text');}
+	);		
 	
 	$("h2").hover(function()
-		{    $("h2").css("background-color", "lightblue");   $(this).css("fontSize", "1.25em");    }, 
+		{    $("h2").addClass('h2-background');   $(this).addClass('h2-font-size');    }, 
 	    	function()
-	    {    $("h2").css("background-color", ""); $(this).css("fontSize", "1em");		}
+	    {    $("h2").removeClass('h2-background');   $(this).removeClass('h2-font-size'); 		}
 	);	
 
 	$(".bottom_button").hover(function()
-		{    $("body").css("background-color", "#000");    }, 
+		{    $("body").addClass('page-background-color');    }, 
 	    	function()
-	    {    $("body").css("background-color", "#eee"); 	}
+	    {    $("body").removeClass('page-background-color');  	}
 	);	
+//Make the first button hide when clicked
+	$(".html .bottom_button").click(function() {
+	$(".html .bottom_button").hide(1000);
+	}
+	);
 
+//When the button is clicked, the paragraph above vanishes. When the button is clicked again, the paragraph reappears	
+	$(".mysql .bottom_button").click(function() {
+		$(".mysql p").toggle();
+		$(".msql p").hide(1000);
+	}
+	);
+	
+//slideToggle instead of toggle (from the last Challenge) to show or hide the paragraph		
+	$(".python .bottom_button").click(function() {
+		$(".python p").slideToggle(800);
 
+	}
+	);
 
-
-
+//fadeTo in conjunction with mouseenter and mouseleave to modify the button. Fade to 50% opacity on mouseenter and fade back to 100% on mouseleave 
+	$(".jquery .bottom_button").mouseenter(function() {
+	$(".jquery .bottom_button").fadeTo("slow",0.5);
+	}	)
+		$(".jquery .bottom_button").mouseleave(function() {
+	$(".jquery .bottom_button").fadeTo("slow",1);
+	}	);
+	
+	;
+	
+	
 }); 
+

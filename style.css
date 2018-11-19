@@ -155,5 +155,16 @@ For jQuery
 **************************/
 
 .color-text {
-	background-color: #EB5255;
+	background-color: red;
+}
+
+.h2-background {
+	background-color: lightblue;
+}
+.h2-font-size {
+	font-size: 1.25em;
+}
+
+.page-background-color {
+	background-color: #000000;
 }
